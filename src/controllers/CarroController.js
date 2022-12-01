@@ -14,6 +14,7 @@ module.exports = {
         }
         res.json(json);
     },
+    
     findById: async (req,res) => {
         let json = {error:'', result:{}};
 
@@ -26,6 +27,7 @@ module.exports = {
 
         res.json(json);
     },
+
     insert: async (req,res) => {
         let json = {error:'', result:{}};
 
@@ -44,6 +46,7 @@ module.exports = {
         }
         res.json(json);
     },
+
     update: async (req,res) => {
         let json = {error:'', result:{}};
 
@@ -63,6 +66,7 @@ module.exports = {
         }
         res.json(json);
     },
+
     delete: async(req,res) => {
         let json = {error:'', result:{}};
 

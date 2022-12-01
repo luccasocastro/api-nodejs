@@ -9,6 +9,7 @@ module.exports = {
             });
         });
     },
+
     findById: (codigo) => {
         return new Promise((aceito, rejeitado) => {
             db.query('SELECT * FROM carros WHERE codigo = ?', [codigo], (error, results) => {
@@ -21,6 +22,7 @@ module.exports = {
             });
         });
     },
+
     insert: (modelo, placa) => {
         return new Promise((aceito, rejeitado) => {
             db.query('INSERT INTO carros (modelo, placa) VALUES (?,?)', [modelo, placa], (error, results) => {
@@ -29,6 +31,7 @@ module.exports = {
             });
         });
     },
+
     update: (codigo, modelo, placa) => {
         return new Promise((aceito, rejeitado) => {
             db.query('UPDATE carros SET modelo = ?, placa = ? WHERE codigo = ?', [modelo, placa, codigo], (error, results) => {
@@ -37,6 +40,7 @@ module.exports = {
             });
         });
     },
+    
     delete: (codigo) => {
         return new Promise((aceito, rejeitado) => {
             db.query('DELETE FROM carros WHERE codigo = ?', [codigo], (error, results) => {
