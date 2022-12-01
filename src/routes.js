@@ -7,5 +7,6 @@ router.get('/carros', CarroController.findAll);
 router.get('/carro/:codigo', CarroController.findById);
 router.post('/carro', CarroController.insert);
 router.put('/carro/:codigo', CarroController.update);
+router.delete('/carro/:codigo', CarroController.delete);
 
 module.exports = router;

@@ -62,5 +62,12 @@ module.exports = {
             json.error = 'Campos não enviados';
         }
         res.json(json);
+    },
+    delete: async(req,res) => {
+        let json = {error:'', result:{}};
+
+        await CarroService.delete(req.params.codigo);
+
+        res.json(json);
     }
 }
