@@ -13,5 +13,17 @@ module.exports = {
             });
         }
         res.json(json);
+    },
+    findById: async (req,res) => {
+        let json = {error:'', result:{}};
+
+        let codigo = req.params.codigo;
+        let carro = await CarroService.findById(codigo);
+
+        if(carro){
+            json.result = carro;
+        }
+
+        res.json(json);
     }
 }
